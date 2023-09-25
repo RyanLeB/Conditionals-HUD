@@ -31,11 +31,14 @@ namespace Conditionals
             ShowHUD();
             TakeDMG(10);
             ShowHUD();
+            healthStatus();
             TakeDMG(25);
             ShowHUD();
             TakeDMG(50);
+            healthStatus();
             ShowHUD();
             Heal(25);
+            healthStatus();
             ShowHUD();
 
             Console.WriteLine();
@@ -56,6 +59,31 @@ namespace Conditionals
             health = health + healed;
             Console.WriteLine("Healed " + healed + " HP!");
         }
+        
+        
+        static void healthStatus()
+        {
+            if (health > 75)
+            {
+                Console.WriteLine("You are healthy");
+            }
+
+            if (health <= 75)
+            {
+                Console.WriteLine("You are hurt");
+            }
+
+            if (health <= 50)
+            {
+                Console.WriteLine("You are badly hurt!");
+            }
+
+            if (health <= 10)
+            {
+                Console.WriteLine("Imminent Danger!! Find health immediately");
+            }
+        }
+        
         
         
         static void weaponSelected(int weaponPickedup)
