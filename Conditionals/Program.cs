@@ -54,6 +54,7 @@ namespace Conditionals
         static void Heal(int healed)
         {
             health = health + healed;
+            Console.WriteLine("Healed " + healed + " HP!");
         }
         
         
